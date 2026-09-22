@@ -15,6 +15,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
+### ios configure
+
+```sh
+[bundle exec] fastlane ios configure
+```
+
+Apply categories, age rating, rights, export compliance, and review contact
+
+### ios status
+
+```sh
+[bundle exec] fastlane ios status
+```
+
+Print current App Store Connect release status as JSON
+
 ### ios validate
 
 ```sh

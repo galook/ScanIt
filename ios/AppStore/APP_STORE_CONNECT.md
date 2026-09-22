@@ -18,7 +18,7 @@ This directory is the source of truth for App Store Connect answers. Localized p
 - App icon: 1024×1024, opaque.
 - Public marketing, support, and iOS privacy-policy source pages under `docs/fruityselia`.
 - Native scripts for project generation, build/test, release archive/export, and localized screenshot capture.
-- Fastlane lanes for metadata validation/upload, TestFlight upload, release-candidate upload, and explicitly gated review submission.
+- Fastlane lanes for App Store configuration/status, metadata validation/upload, TestFlight upload, release-candidate upload, and explicitly gated review submission.
 
 ## Publisher-only values and decisions
 
@@ -71,9 +71,19 @@ bash tools/capture-app-store-screenshots.sh
 bash tools/archive-app-store.sh --unsigned
 bash tools/validate_app_store.sh --submission
 bash tools/archive-app-store.sh
+bash tools/bundle.sh exec fastlane ios configure
+bash tools/bundle.sh exec fastlane ios status
 bash tools/bundle.sh exec fastlane ios validate
 UPLOAD_SCREENSHOTS=1 bash tools/bundle.sh exec fastlane ios release_candidate
 ```
+
+The configure lane applies the free USA base price, availability in all current
+territories and new territories, Productivity/Utilities categories, the checked-in
+age-rating answers, content rights, manual release, export compliance, and review
+contact details. It is idempotent. Without `APP_REVIEW_PHONE`, it applies everything
+else and prints the remaining reviewer-phone blocker. The status lane reads Apple
+back and reports the processed build, disclosures, localizations, screenshot counts,
+pricing, and all territory states without printing credentials or the phone number.
 
 Test the processed build in TestFlight. After checking the generated product page, privacy answers, age rating, territories, reviewer contact, and compliance questions:
 

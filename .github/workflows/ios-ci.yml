@@ -22,10 +22,5 @@ jobs:
         run: xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
       - name: Validate unsigned device archive
         run: cd ios && bash tools/archive-app-store.sh --unsigned
-      - name: Pick simulator and test
-        shell: bash
-        run: |
-          set -euo pipefail
-          destination="$(xcrun simctl list devices available --json | jq -r 'first(.devices[] | .[] | select(.isAvailable and (.name | startswith("iPhone"))) | .udid) // empty')"
-          test -n "$destination"
-          xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -destination "id=$destination" CODE_SIGNING_ALLOWED=NO test
+      - name: Run unit and UI tests
+        run: cd ios && bash tools/test-ci.sh
