@@ -1,0 +1,31 @@
+name: iOS CI
+on:
+  push:
+    paths: ['ios/**', '.github/workflows/ios-ci.yml']
+  pull_request:
+    paths: ['ios/**', '.github/workflows/ios-ci.yml']
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Validate App Store release data
+        run: cd ios && bash tools/validate_app_store.sh
+      - name: Verify generated project is current
+        run: git diff --exit-code -- ios/SeliaScan.xcodeproj
+      - name: Build release configuration
+        run: xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Validate unsigned device archive
+        run: cd ios && bash tools/archive-app-store.sh --unsigned
+      - name: Pick simulator and test
+        shell: bash
+        run: |
+          set -euo pipefail
+          destination="$(xcrun simctl list devices available | sed -nE 's/^[[:space:]]+(iPhone[^()]*) \(([0-9A-F-]+)\) \(Shutdown\)$/id=\2/p' | head -1)"
+          test -n "$destination"
+          xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -destination "$destination" CODE_SIGNING_ALLOWED=NO test

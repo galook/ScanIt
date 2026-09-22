@@ -1,0 +1,27 @@
+FruitySelia turns paper, photos, and PDFs into clean documents without sending their contents to a developer-operated server.
+
+CAPTURE AND IMPORT
+• Scan one or more pages with Apple's document camera.
+• Import images or PDFs from Photos and Files.
+• Reorder pages and review every result before export.
+
+EDIT ON DEVICE
+• Crop, rotate, filter, and adjust pages.
+• Clean up whiteboards and marks manually or with Smart Cleanup.
+• Permanently flatten secure redactions into exported pixels.
+• Add reusable visual signatures and stamps.
+
+FIND AND EXPORT
+• Recognize text and barcodes on device.
+• Use Live Text in the full-screen viewer.
+• Create searchable PDFs or JPEG and PNG images.
+• Choose original quality, a target PDF size, or a custom size target.
+• Save to Files or Photos, share, or print with system controls.
+
+PRIVATE BY DESIGN
+• No FruitySelia account, ads, subscription, analytics, or cloud document library.
+• Document processing uses Apple frameworks on your device.
+• Recent holds up to eight disposable working copies and can be protected with device authentication.
+• Saved files remain under your control in Files, Photos, or a provider you select.
+
+FruitySelia supports iPhone and iPad. A scan can contain up to 20 pages. Visual signatures are document marks and are not cryptographic digital signatures.

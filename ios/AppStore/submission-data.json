@@ -1,0 +1,71 @@
+{
+  "app": {
+    "name": "FruitySelia",
+    "bundleId": "com.majkeylab.seliascan",
+    "sku": "fruityselia-ios",
+    "appleTeamId": "MTYBUX7QS6",
+    "primaryLocale": "en-US",
+    "version": "2.0",
+    "build": "assigned by release script",
+    "copyright": "2026 Matěj Teplý",
+    "price": "free",
+    "primaryCategory": "PRODUCTIVITY",
+    "secondaryCategory": "UTILITIES"
+  },
+  "urls": {
+    "marketing": "https://majkey25.github.io/ScanIt/fruityselia/",
+    "support": "https://majkey25.github.io/ScanIt/fruityselia/support.html",
+    "privacy": "https://majkey25.github.io/ScanIt/fruityselia/privacy.html"
+  },
+  "review": {
+    "requiresLogin": false,
+    "demoAccount": false,
+    "contactFirstName": "Matěj",
+    "contactLastName": "Teplý",
+    "contactEmail": "majkeylab@gmail.com",
+    "contactPhone": "required from publisher before submission"
+  },
+  "appPrivacy": {
+    "privacyPolicyUrl": "https://majkey25.github.io/ScanIt/fruityselia/privacy.html",
+    "dataCollected": false,
+    "tracking": false,
+    "trackingDomains": [],
+    "notes": "The iOS binary has no networking, analytics, advertising, account, or third-party SDK. User-selected system sharing and storage destinations act only after user action."
+  },
+  "exportCompliance": {
+    "usesEncryption": false,
+    "usesNonExemptEncryption": false,
+    "documentationRequired": false
+  },
+  "contentRights": {
+    "containsThirdPartyContent": false,
+    "hasNecessaryRights": true
+  },
+  "ageRating": {
+    "advertising": "NONE",
+    "contests": "NONE",
+    "gambling": "NONE",
+    "gamblingSimulated": "NONE",
+    "gunsOrWeapons": "NONE",
+    "horrorOrFear": "NONE",
+    "medicalOrTreatmentInformation": "NONE",
+    "messagingAndChat": "NONE",
+    "profanityOrCrudeHumor": "NONE",
+    "sexualContentOrNudity": "NONE",
+    "unrestrictedWebAccess": false,
+    "userGeneratedContentSharedInApp": false,
+    "violence": "NONE"
+  },
+  "businessModel": {
+    "accounts": false,
+    "advertising": false,
+    "inAppPurchases": false,
+    "subscriptions": false
+  },
+  "release": {
+    "phasedRelease": false,
+    "releaseMode": "manual",
+    "territories": "publisher must confirm in App Store Connect",
+    "euTraderStatus": "publisher must declare in App Store Connect"
+  }
+}

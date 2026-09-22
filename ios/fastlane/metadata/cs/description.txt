@@ -1,0 +1,24 @@
+FruitySelia mění papír, fotografie a PDF v čisté dokumenty, aniž by jejich obsah odesílala na server provozovaný vývojářem.
+
+SKENOVÁNÍ A IMPORT
+• Naskenujte jednu nebo více stran pomocí systémového fotoaparátu dokumentů.
+• Importujte obrázky nebo PDF z Fotek a Souborů.
+• Změňte pořadí stran a před exportem vše zkontrolujte.
+
+ÚPRAVY V ZAŘÍZENÍ
+• Ořízněte, otočte, filtrujte a upravte strany.
+• Vyčistěte tabule a nežádoucí značky.
+• Bezpečné redakce jsou trvale sloučeny s obrazem exportu.
+• Přidejte opakovaně použitelné vizuální podpisy a razítka.
+
+ROZPOZNÁNÍ A EXPORT
+• Rozpoznávejte text a čárové kódy přímo v zařízení.
+• Vytvářejte prohledávatelná PDF nebo obrázky JPEG a PNG.
+• Ukládejte do Souborů či Fotek, sdílejte nebo tiskněte.
+
+SOUKROMÍ V ZÁKLADU
+• Bez účtu, reklam, předplatného, analytiky a cloudové knihovny dokumentů.
+• Zpracování dokumentů používá frameworky Apple ve vašem zařízení.
+• Poslední skeny obsahují nejvýše osm dočasných pracovních kopií a lze je chránit ověřením zařízení.
+
+FruitySelia podporuje iPhone a iPad. Jeden sken může mít nejvýše 20 stran. Vizuální podpisy nejsou kryptografické elektronické podpisy.

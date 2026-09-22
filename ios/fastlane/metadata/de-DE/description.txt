@@ -1,0 +1,24 @@
+FruitySelia macht aus Papier, Fotos und PDFs saubere Dokumente, ohne deren Inhalt an einen vom Entwickler betriebenen Server zu senden.
+
+SCANNEN UND IMPORTIEREN
+• Scanne eine oder mehrere Seiten mit Apples Dokumentenkamera.
+• Importiere Bilder oder PDFs aus Fotos und Dateien.
+• Sortiere Seiten neu und prüfe alles vor dem Export.
+
+AUF DEM GERÄT BEARBEITEN
+• Schneide Seiten zu, drehe, filtere und korrigiere sie.
+• Bereinige Whiteboards und unerwünschte Markierungen.
+• Sichere Schwärzungen werden dauerhaft in die Exportpixel eingebettet.
+• Füge wiederverwendbare visuelle Unterschriften und Stempel hinzu.
+
+ERKENNEN UND EXPORTIEREN
+• Erkenne Text und Barcodes auf dem Gerät.
+• Erstelle durchsuchbare PDFs oder JPEG- und PNG-Bilder.
+• Speichere in Dateien oder Fotos, teile oder drucke mit Systemfunktionen.
+
+DATENSCHUTZ ALS GRUNDLAGE
+• Kein Konto, keine Werbung, kein Abo, keine Analyse und kein Cloud-Dokumentenarchiv.
+• Die Dokumentverarbeitung verwendet Apple-Frameworks auf deinem Gerät.
+• „Zuletzt“ enthält höchstens acht löschbare Arbeitskopien und kann mit der Geräteauthentifizierung geschützt werden.
+
+FruitySelia unterstützt iPhone und iPad. Ein Scan kann bis zu 20 Seiten enthalten. Visuelle Unterschriften sind keine kryptografischen digitalen Signaturen.

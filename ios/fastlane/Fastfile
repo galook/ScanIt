@@ -1,0 +1,111 @@
+opt_out_usage
+default_platform(:ios)
+
+def connect_api_key
+  app_store_connect_api_key(
+    key_id: ENV.fetch("APP_STORE_CONNECT_KEY_ID"),
+    issuer_id: ENV.fetch("APP_STORE_CONNECT_ISSUER_ID"),
+    key_filepath: ENV.fetch("APP_STORE_CONNECT_KEY_FILE"),
+    duration: 1200,
+    in_house: false
+  )
+end
+
+def release_ipa
+  path = ENV["IPA_PATH"] || Dir["build/export/*.ipa"].first
+  UI.user_error!("No IPA found. Run tools/archive-app-store.sh or set IPA_PATH.") unless path && File.file?(path)
+  path
+end
+
+platform :ios do
+  desc "Validate local release data and metadata against App Store Connect"
+  lane :validate do
+    sh("bash tools/validate_app_store.sh")
+    deliver(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      platform: "ios",
+      metadata_path: "fastlane/metadata",
+      screenshots_path: "fastlane/screenshots",
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      verify_only: true,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload localized metadata; add UPLOAD_SCREENSHOTS=1 after capture"
+  lane :metadata do
+    sh("bash tools/validate_app_store.sh")
+    deliver(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      platform: "ios",
+      metadata_path: "fastlane/metadata",
+      screenshots_path: "fastlane/screenshots",
+      skip_binary_upload: true,
+      skip_screenshots: ENV["UPLOAD_SCREENSHOTS"] != "1",
+      overwrite_screenshots: ENV["UPLOAD_SCREENSHOTS"] == "1",
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload an exported IPA to TestFlight"
+  lane :beta do
+    pilot(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      ipa: release_ipa,
+      skip_waiting_for_build_processing: true,
+      distribute_external: false
+    )
+  end
+
+  desc "Upload IPA and store data without submitting for review"
+  lane :release_candidate do
+    sh("bash tools/validate_app_store.sh")
+    deliver(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      platform: "ios",
+      ipa: release_ipa,
+      metadata_path: "fastlane/metadata",
+      screenshots_path: "fastlane/screenshots",
+      skip_screenshots: ENV["UPLOAD_SCREENSHOTS"] != "1",
+      overwrite_screenshots: ENV["UPLOAD_SCREENSHOTS"] == "1",
+      submit_for_review: false,
+      automatic_release: false,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Explicitly submit the prepared version for manual release"
+  lane :submit_review do
+    UI.user_error!("Set CONFIRM_SUBMIT=YES after reviewing every disclosure") unless ENV["CONFIRM_SUBMIT"] == "YES"
+    sh("bash tools/validate_app_store.sh --submission")
+    deliver(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      platform: "ios",
+      ipa: release_ipa,
+      skip_binary_upload: true,
+      skip_metadata: true,
+      skip_screenshots: true,
+      submit_for_review: true,
+      automatic_release: false,
+      force: true,
+      submission_information: {
+        content_rights_contains_third_party_content: false,
+        export_compliance_uses_encryption: false
+      }
+    )
+  end
+end

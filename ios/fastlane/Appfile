@@ -1,0 +1,3 @@
+app_identifier(ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"))
+apple_id(ENV["APP_STORE_APP_ID"]) if ENV["APP_STORE_APP_ID"]
+team_id(ENV.fetch("APPLE_TEAM_ID", "MTYBUX7QS6"))

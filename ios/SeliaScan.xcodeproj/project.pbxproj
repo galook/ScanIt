@@ -1,0 +1,1041 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0600C649C33C224DA72602A0 /* AppStoreScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02AB676C6799EF567FDB2E /* AppStoreScreenshotTests.swift */; };
+		0E2D0C5AA776312772C0677F /* ScannerLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F147C114FAF8DE457F89B9 /* ScannerLaunchView.swift */; };
+		13524B520F2AAAEE15B109F3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F652A1B36A3265C4E5CB2284 /* AppConfiguration.swift */; };
+		1917E7FAB36A80B83EC708CA /* ShareCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32E8E79B4CF895E398C768 /* ShareCoordinator.swift */; };
+		1D97ED15653A71732B41FC1F /* FileExportPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F045A5D3EA8E16C7D96EB51D /* FileExportPicker.swift */; };
+		23B364DF1477DBBE05EB0E75 /* RedactionEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645338A10C33E0CEFBBA84E /* RedactionEditorView.swift */; };
+		2CA37E2A97517FB59B1A9D1A /* ManualCleanupEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3488675A7D78831A8758081 /* ManualCleanupEditorView.swift */; };
+		2E0C743200737521EE37992D /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB1C684D11CB1646A58E56 /* ModelTests.swift */; };
+		30C8A0D4FA974E9547AC78A3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 90890698A55771C832F4614B /* Localizable.xcstrings */; };
+		3D58AD11DFF4BB791A039004 /* LiveTextImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11079C5B3A23189309143428 /* LiveTextImageView.swift */; };
+		4058CCF4FC720758FD00E1B5 /* NewScanIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74251481F16B6AE372CFD6B0 /* NewScanIntent.swift */; };
+		47A3188188C8BC3FC4CE9C95 /* AppIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D428BB5E757188E6573B2C0 /* AppIdentifiers.swift */; };
+		48F73CA49C8B36B6797899FA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0ED8B545796CB5319C6E344F /* InfoPlist.xcstrings */; };
+		49E600A5E527BAF7283D60D3 /* CleanupRevisionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA30F37274F760F9983F131 /* CleanupRevisionService.swift */; };
+		4B0EA50F607993F86472F2EF /* ExternalOutputStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CCD46DD7E93856B3B6CE79 /* ExternalOutputStore.swift */; };
+		4B7C0017FD633FF7CF14071E /* FolderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64887E9D397107CCA719DAA /* FolderPicker.swift */; };
+		4C78BF82D57A79B5B020A3D0 /* ControlsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5470BBAE3CF0E37DDD31491 /* ControlsBundle.swift */; };
+		4FB84302C79E17B7F98A796E /* RecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095355A34D189EA35F4BDE4C /* RecentView.swift */; };
+		507F0D56173337606D7A1E82 /* PhotosSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25AD53E732359A09EA22B96 /* PhotosSaver.swift */; };
+		5288AEFE8487BC9054E31998 /* SecureRedactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CDEAE001916AC344B96BCA /* SecureRedactionService.swift */; };
+		53DACD5A0B02A2DEC357E5C0 /* CleanupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D478C71AA24C9AA4313414A /* CleanupService.swift */; };
+		56D57B617929334912665345 /* ImportDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD73F216963FC11E89F19E /* ImportDocumentView.swift */; };
+		58E4AC7D72C80AF936588FE7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3B7F22AD8C63BFC8D09C4 /* ResultView.swift */; };
+		5A1C625666C2822D2822D8B6 /* PageOrganizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A420ECA83CCDD7337772224 /* PageOrganizerView.swift */; };
+		61A85B0717B30A085D0D4626 /* PDFImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FD2F5091BFFED423D9D06 /* PDFImportService.swift */; };
+		61EB2409076C3037414CDFA3 /* SavedMarkStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4143A0180110B76937641 /* SavedMarkStoreTests.swift */; };
+		6836B1C05793E1B09A911AF4 /* ViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF087E4968081E1730EBC7 /* ViewerView.swift */; };
+		6F244AA30A820146F79CB44F /* RecentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2BD0552FFD7D67B1FA092 /* RecentRepository.swift */; };
+		7074C513AE0D83A14CF94765 /* SignatureCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894AB012DF9B74E499B22C2E /* SignatureCanvas.swift */; };
+		82D37FDCFDC6EDC795752FA0 /* AppIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D428BB5E757188E6573B2C0 /* AppIdentifiers.swift */; };
+		871876721E8E411649B09F25 /* TrackedOutputDeletionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43D820FEF238020FB42C58 /* TrackedOutputDeletionService.swift */; };
+		939E2715F3456DFB35A9F585 /* ScanModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEC5B3AA16F426ABC697DC /* ScanModels.swift */; };
+		9493423FF1972426B46DB13A /* SeliaScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B838F2104251ED500B1AE176 /* SeliaScanApp.swift */; };
+		969CFBA22674DC46C5C357AE /* PDFCoordinateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F3BC56736233B03097E79 /* PDFCoordinateMapper.swift */; };
+		9978272F5C1AC3207556A5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17AF831BE1A5B36ECB5C6168 /* Assets.xcassets */; };
+		9D7FA5E5EE477EF397238F26 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C860097F6EC8B1A2253AC61 /* SettingsView.swift */; };
+		9ED8ACFD0EA299D3D14A07C8 /* PrintCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AF5E3F9C1FA2E86B7191F /* PrintCoordinator.swift */; };
+		A408E69A3A2759D607C91D3A /* SeliaScanControls.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 066A7D80335271B89BE4635D /* SeliaScanControls.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A6C3E2C5BF6B6EE5A55569E8 /* DocumentAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E02FF7B114035CDC7E5AFEC /* DocumentAnalysisService.swift */; };
+		A7F9504FA253AAE43D11A45C /* RecentRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9937AD4BC0F401C151EF9E /* RecentRepositoryTests.swift */; };
+		B23F2206EB2EC5BF8A7C9AB7 /* ExportSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2C8F1FD81C88FED492943 /* ExportSettingsView.swift */; };
+		B3912991C199B1A05FEC37D2 /* RedactionRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FC2B9749FB6A6CAECA627 /* RedactionRenderer.swift */; };
+		BDDE5F953A46BC304D1552FF /* SignatureEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39AFAB345B317F07130DC8 /* SignatureEditorView.swift */; };
+		BFAA04A200C69B236B55B183 /* SearchablePDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9DF4C1091FD29DB873EEF /* SearchablePDFExporter.swift */; };
+		C0741183F08FDA9361648C08 /* SecurityGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D142F97297B1E6DAFD00F76 /* SecurityGeometryTests.swift */; };
+		C7625B2207CF16636C4C4C85 /* ScanControlWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E82A9AAC32DA8986BF000A9 /* ScanControlWidget.swift */; };
+		D1442FAEE636FD47829248FA /* DocumentActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF80B2D93901B522637B8BA /* DocumentActionsView.swift */; };
+		D29C575336E3F6C3EC5DE2DA /* PageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62D5B32716C225B49B8E592 /* PageRenderer.swift */; };
+		D2EC163AB961F4265E016872 /* LaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0767BF34BF4BBA994FCB3B5F /* LaunchUITests.swift */; };
+		E328AF29872D047B282E471B /* ImageExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F253A6CF1D74CC4831CCB73 /* ImageExporter.swift */; };
+		E3A771B0D87677AC056DB5C2 /* AppIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D428BB5E757188E6573B2C0 /* AppIdentifiers.swift */; };
+		E7F5D865F57C8BAA9ED4B72E /* DocumentScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3814A2ECEF33A18654C1BA6B /* DocumentScanner.swift */; };
+		EE8979BFFD8633D91289CDD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ABC823488D437B3430FB21 /* ContentView.swift */; };
+		F8EF14B49ED2D8FBA27F9DDD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = AC3E348FFCD753216A7A555E /* PrivacyInfo.xcprivacy */; };
+		F90CC9CE73770BFCA7BA12E6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E480222E795D520648D32E /* AppState.swift */; };
+		FD91C78DED41581920F0C17B /* PageEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37ECFB9D007661D65382370 /* PageEditView.swift */; };
+		FFFFC7CDD80DAE239C60A135 /* DocumentActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A62B136E11B89C0539CBBA /* DocumentActions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05AA800A20CB5627A5D8E75C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76AD2B21D1D27BEB5366672F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEB64C5512F66CAFF4BEE8B1;
+			remoteInfo = SeliaScanControls;
+		};
+		2D9D14C8420CE5CB73ACEEF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76AD2B21D1D27BEB5366672F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E14E1FD7ABC5463CCF422A;
+			remoteInfo = SeliaScan;
+		};
+		7D25C0A020CE23FF87A277ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76AD2B21D1D27BEB5366672F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0E14E1FD7ABC5463CCF422A;
+			remoteInfo = SeliaScan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DC7514BFA395C0951946435 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A408E69A3A2759D607C91D3A /* SeliaScanControls.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02BB1C684D11CB1646A58E56 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		066A7D80335271B89BE4635D /* SeliaScanControls.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = SeliaScanControls.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0767BF34BF4BBA994FCB3B5F /* LaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchUITests.swift; sourceTree = "<group>"; };
+		08CCD46DD7E93856B3B6CE79 /* ExternalOutputStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalOutputStore.swift; sourceTree = "<group>"; };
+		095355A34D189EA35F4BDE4C /* RecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentView.swift; sourceTree = "<group>"; };
+		09AF087E4968081E1730EBC7 /* ViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerView.swift; sourceTree = "<group>"; };
+		0D2FC2B9749FB6A6CAECA627 /* RedactionRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactionRenderer.swift; sourceTree = "<group>"; };
+		0D478C71AA24C9AA4313414A /* CleanupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupService.swift; sourceTree = "<group>"; };
+		0E02FF7B114035CDC7E5AFEC /* DocumentAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAnalysisService.swift; sourceTree = "<group>"; };
+		0ED8B545796CB5319C6E344F /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		11079C5B3A23189309143428 /* LiveTextImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTextImageView.swift; sourceTree = "<group>"; };
+		17AF831BE1A5B36ECB5C6168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C860097F6EC8B1A2253AC61 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1F253A6CF1D74CC4831CCB73 /* ImageExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExporter.swift; sourceTree = "<group>"; };
+		2645338A10C33E0CEFBBA84E /* RedactionEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactionEditorView.swift; sourceTree = "<group>"; };
+		273AF5E3F9C1FA2E86B7191F /* PrintCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintCoordinator.swift; sourceTree = "<group>"; };
+		2B43D820FEF238020FB42C58 /* TrackedOutputDeletionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedOutputDeletionService.swift; sourceTree = "<group>"; };
+		2EB3B7F22AD8C63BFC8D09C4 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		337C26D457EF1FB6F4218E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		34EEC5B3AA16F426ABC697DC /* ScanModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanModels.swift; sourceTree = "<group>"; };
+		37F2BD0552FFD7D67B1FA092 /* RecentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRepository.swift; sourceTree = "<group>"; };
+		3814A2ECEF33A18654C1BA6B /* DocumentScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentScanner.swift; sourceTree = "<group>"; };
+		41F147C114FAF8DE457F89B9 /* ScannerLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerLaunchView.swift; sourceTree = "<group>"; };
+		4A39AFAB345B317F07130DC8 /* SignatureEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureEditorView.swift; sourceTree = "<group>"; };
+		4A9FD2F5091BFFED423D9D06 /* PDFImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFImportService.swift; sourceTree = "<group>"; };
+		68A4143A0180110B76937641 /* SavedMarkStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMarkStoreTests.swift; sourceTree = "<group>"; };
+		6E82A9AAC32DA8986BF000A9 /* ScanControlWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanControlWidget.swift; sourceTree = "<group>"; };
+		74251481F16B6AE372CFD6B0 /* NewScanIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScanIntent.swift; sourceTree = "<group>"; };
+		7A420ECA83CCDD7337772224 /* PageOrganizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOrganizerView.swift; sourceTree = "<group>"; };
+		7D142F97297B1E6DAFD00F76 /* SecurityGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityGeometryTests.swift; sourceTree = "<group>"; };
+		7DF80B2D93901B522637B8BA /* DocumentActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionsView.swift; sourceTree = "<group>"; };
+		894AB012DF9B74E499B22C2E /* SignatureCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureCanvas.swift; sourceTree = "<group>"; };
+		8AD71581B004FE509A4DA6EF /* SeliaScanUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SeliaScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D428BB5E757188E6573B2C0 /* AppIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdentifiers.swift; sourceTree = "<group>"; };
+		8FA30F37274F760F9983F131 /* CleanupRevisionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupRevisionService.swift; sourceTree = "<group>"; };
+		90890698A55771C832F4614B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A4E480222E795D520648D32E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A6ABC823488D437B3430FB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC32E8E79B4CF895E398C768 /* ShareCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCoordinator.swift; sourceTree = "<group>"; };
+		AC3E348FFCD753216A7A555E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		AEC2C8F1FD81C88FED492943 /* ExportSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportSettingsView.swift; sourceTree = "<group>"; };
+		B3488675A7D78831A8758081 /* ManualCleanupEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCleanupEditorView.swift; sourceTree = "<group>"; };
+		B62D5B32716C225B49B8E592 /* PageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRenderer.swift; sourceTree = "<group>"; };
+		B64887E9D397107CCA719DAA /* FolderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPicker.swift; sourceTree = "<group>"; };
+		B838F2104251ED500B1AE176 /* SeliaScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeliaScanApp.swift; sourceTree = "<group>"; };
+		BB71A19CEBD40203CE4F82FC /* SeliaScan.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SeliaScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13F3BC56736233B03097E79 /* PDFCoordinateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCoordinateMapper.swift; sourceTree = "<group>"; };
+		C1A62B136E11B89C0539CBBA /* DocumentActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActions.swift; sourceTree = "<group>"; };
+		C25AD53E732359A09EA22B96 /* PhotosSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSaver.swift; sourceTree = "<group>"; };
+		C5BD73F216963FC11E89F19E /* ImportDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDocumentView.swift; sourceTree = "<group>"; };
+		D4C9DF4C1091FD29DB873EEF /* SearchablePDFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchablePDFExporter.swift; sourceTree = "<group>"; };
+		DD02AB676C6799EF567FDB2E /* AppStoreScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshotTests.swift; sourceTree = "<group>"; };
+		E19E4875044693FC693593CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EB9937AD4BC0F401C151EF9E /* RecentRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRepositoryTests.swift; sourceTree = "<group>"; };
+		EC55228E3A64BC36FF4EFFB9 /* SeliaScanTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SeliaScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F045A5D3EA8E16C7D96EB51D /* FileExportPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExportPicker.swift; sourceTree = "<group>"; };
+		F37ECFB9D007661D65382370 /* PageEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageEditView.swift; sourceTree = "<group>"; };
+		F3CDEAE001916AC344B96BCA /* SecureRedactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureRedactionService.swift; sourceTree = "<group>"; };
+		F5470BBAE3CF0E37DDD31491 /* ControlsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsBundle.swift; sourceTree = "<group>"; };
+		F652A1B36A3265C4E5CB2284 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		060ED4F04DCCB53783283325 /* SeliaScan */ = {
+			isa = PBXGroup;
+			children = (
+				88314243DA7ACD6554CC67BB /* App */,
+				0873E31C61B256252965FEA4 /* Features */,
+				CFC841E8B5245C62131CE88C /* Models */,
+				66B41968EB0CE62BFBA897EC /* Resources */,
+				2903CB2E560F73642DD31505 /* Services */,
+				7248F5053476A69E18439DEA /* Support */,
+				F744ABDF12D8F13EB40F4E1D /* SystemIntegration */,
+			);
+			path = SeliaScan;
+			sourceTree = "<group>";
+		};
+		0873E31C61B256252965FEA4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				81B26ED0051CA9213F8A38D9 /* Actions */,
+				1A7E8B2F0963A6EDB85B1964 /* Cleanup */,
+				6865014D9888A7E74F24D4EA /* Editing */,
+				47A97E6A0349F1FA24BBF539 /* Export */,
+				295851C1896A001527D61E41 /* Import */,
+				FBC25991410480201BE7286A /* Recent */,
+				B5FAB23C60D1D00C58865521 /* Redaction */,
+				F978E35E80C490178056818E /* Result */,
+				842FFF866FFC71DBD8E5348F /* Scanner */,
+				C3240B378D1FAF9F82A9B8F5 /* Settings */,
+				AD81F761AE6F560AD94E2564 /* SignStamp */,
+				66207C79D70AB6EF3E13A2C8 /* Viewer */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		126CA343EE95CE5AE9DA8F3E = {
+			isa = PBXGroup;
+			children = (
+				060ED4F04DCCB53783283325 /* SeliaScan */,
+				81D76922864988D7173FA116 /* SeliaScanControls */,
+				8D29700C75E23C98892986C9 /* SeliaScanTests */,
+				842F14E975A0603F543D6A9F /* SeliaScanUITests */,
+				5EA7BEA061B9C478C0009A64 /* Shared */,
+				218CDF58F92A1C25145C76E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A7E8B2F0963A6EDB85B1964 /* Cleanup */ = {
+			isa = PBXGroup;
+			children = (
+				B3488675A7D78831A8758081 /* ManualCleanupEditorView.swift */,
+			);
+			path = Cleanup;
+			sourceTree = "<group>";
+		};
+		218CDF58F92A1C25145C76E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB71A19CEBD40203CE4F82FC /* SeliaScan.app */,
+				066A7D80335271B89BE4635D /* SeliaScanControls.appex */,
+				EC55228E3A64BC36FF4EFFB9 /* SeliaScanTests.xctest */,
+				8AD71581B004FE509A4DA6EF /* SeliaScanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2903CB2E560F73642DD31505 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7E873DD5C9E243DD0F2C241 /* Imaging */,
+				982C655BDD2CDBBF5B822F09 /* PDF */,
+				AB7C7891756FA9B609A16061 /* Scanner */,
+				A043FF4BB858E156D79BB526 /* Sharing */,
+				E325F38178E021947DB05A9E /* Storage */,
+				4FEA56742047BE8E5F54C7EE /* Vision */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		295851C1896A001527D61E41 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				C5BD73F216963FC11E89F19E /* ImportDocumentView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		47A97E6A0349F1FA24BBF539 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				AEC2C8F1FD81C88FED492943 /* ExportSettingsView.swift */,
+				F045A5D3EA8E16C7D96EB51D /* FileExportPicker.swift */,
+				B64887E9D397107CCA719DAA /* FolderPicker.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		4FEA56742047BE8E5F54C7EE /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				0E02FF7B114035CDC7E5AFEC /* DocumentAnalysisService.swift */,
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
+		5EA7BEA061B9C478C0009A64 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D428BB5E757188E6573B2C0 /* AppIdentifiers.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		66207C79D70AB6EF3E13A2C8 /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				11079C5B3A23189309143428 /* LiveTextImageView.swift */,
+				09AF087E4968081E1730EBC7 /* ViewerView.swift */,
+			);
+			path = Viewer;
+			sourceTree = "<group>";
+		};
+		66B41968EB0CE62BFBA897EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17AF831BE1A5B36ECB5C6168 /* Assets.xcassets */,
+				E19E4875044693FC693593CC /* Info.plist */,
+				0ED8B545796CB5319C6E344F /* InfoPlist.xcstrings */,
+				90890698A55771C832F4614B /* Localizable.xcstrings */,
+				AC3E348FFCD753216A7A555E /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6865014D9888A7E74F24D4EA /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				F37ECFB9D007661D65382370 /* PageEditView.swift */,
+			);
+			path = Editing;
+			sourceTree = "<group>";
+		};
+		7248F5053476A69E18439DEA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F652A1B36A3265C4E5CB2284 /* AppConfiguration.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		81B26ED0051CA9213F8A38D9 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C1A62B136E11B89C0539CBBA /* DocumentActions.swift */,
+				7DF80B2D93901B522637B8BA /* DocumentActionsView.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		81D76922864988D7173FA116 /* SeliaScanControls */ = {
+			isa = PBXGroup;
+			children = (
+				F5470BBAE3CF0E37DDD31491 /* ControlsBundle.swift */,
+				337C26D457EF1FB6F4218E0E /* Info.plist */,
+			);
+			path = SeliaScanControls;
+			sourceTree = "<group>";
+		};
+		842F14E975A0603F543D6A9F /* SeliaScanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD02AB676C6799EF567FDB2E /* AppStoreScreenshotTests.swift */,
+				0767BF34BF4BBA994FCB3B5F /* LaunchUITests.swift */,
+			);
+			path = SeliaScanUITests;
+			sourceTree = "<group>";
+		};
+		842FFF866FFC71DBD8E5348F /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				41F147C114FAF8DE457F89B9 /* ScannerLaunchView.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		88314243DA7ACD6554CC67BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A4E480222E795D520648D32E /* AppState.swift */,
+				A6ABC823488D437B3430FB21 /* ContentView.swift */,
+				B838F2104251ED500B1AE176 /* SeliaScanApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8D29700C75E23C98892986C9 /* SeliaScanTests */ = {
+			isa = PBXGroup;
+			children = (
+				02BB1C684D11CB1646A58E56 /* ModelTests.swift */,
+				EB9937AD4BC0F401C151EF9E /* RecentRepositoryTests.swift */,
+				68A4143A0180110B76937641 /* SavedMarkStoreTests.swift */,
+				7D142F97297B1E6DAFD00F76 /* SecurityGeometryTests.swift */,
+			);
+			path = SeliaScanTests;
+			sourceTree = "<group>";
+		};
+		982C655BDD2CDBBF5B822F09 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				C13F3BC56736233B03097E79 /* PDFCoordinateMapper.swift */,
+				4A9FD2F5091BFFED423D9D06 /* PDFImportService.swift */,
+				D4C9DF4C1091FD29DB873EEF /* SearchablePDFExporter.swift */,
+			);
+			path = PDF;
+			sourceTree = "<group>";
+		};
+		A043FF4BB858E156D79BB526 /* Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				C25AD53E732359A09EA22B96 /* PhotosSaver.swift */,
+				273AF5E3F9C1FA2E86B7191F /* PrintCoordinator.swift */,
+				AC32E8E79B4CF895E398C768 /* ShareCoordinator.swift */,
+			);
+			path = Sharing;
+			sourceTree = "<group>";
+		};
+		AB7C7891756FA9B609A16061 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				3814A2ECEF33A18654C1BA6B /* DocumentScanner.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		AD81F761AE6F560AD94E2564 /* SignStamp */ = {
+			isa = PBXGroup;
+			children = (
+				894AB012DF9B74E499B22C2E /* SignatureCanvas.swift */,
+				4A39AFAB345B317F07130DC8 /* SignatureEditorView.swift */,
+			);
+			path = SignStamp;
+			sourceTree = "<group>";
+		};
+		B5FAB23C60D1D00C58865521 /* Redaction */ = {
+			isa = PBXGroup;
+			children = (
+				2645338A10C33E0CEFBBA84E /* RedactionEditorView.swift */,
+			);
+			path = Redaction;
+			sourceTree = "<group>";
+		};
+		B7E873DD5C9E243DD0F2C241 /* Imaging */ = {
+			isa = PBXGroup;
+			children = (
+				8FA30F37274F760F9983F131 /* CleanupRevisionService.swift */,
+				0D478C71AA24C9AA4313414A /* CleanupService.swift */,
+				1F253A6CF1D74CC4831CCB73 /* ImageExporter.swift */,
+				B62D5B32716C225B49B8E592 /* PageRenderer.swift */,
+				0D2FC2B9749FB6A6CAECA627 /* RedactionRenderer.swift */,
+				F3CDEAE001916AC344B96BCA /* SecureRedactionService.swift */,
+			);
+			path = Imaging;
+			sourceTree = "<group>";
+		};
+		C3240B378D1FAF9F82A9B8F5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1C860097F6EC8B1A2253AC61 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CFC841E8B5245C62131CE88C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34EEC5B3AA16F426ABC697DC /* ScanModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E325F38178E021947DB05A9E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				08CCD46DD7E93856B3B6CE79 /* ExternalOutputStore.swift */,
+				37F2BD0552FFD7D67B1FA092 /* RecentRepository.swift */,
+				2B43D820FEF238020FB42C58 /* TrackedOutputDeletionService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		F744ABDF12D8F13EB40F4E1D /* SystemIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				74251481F16B6AE372CFD6B0 /* NewScanIntent.swift */,
+				6E82A9AAC32DA8986BF000A9 /* ScanControlWidget.swift */,
+			);
+			path = SystemIntegration;
+			sourceTree = "<group>";
+		};
+		F978E35E80C490178056818E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				7A420ECA83CCDD7337772224 /* PageOrganizerView.swift */,
+				2EB3B7F22AD8C63BFC8D09C4 /* ResultView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		FBC25991410480201BE7286A /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				095355A34D189EA35F4BDE4C /* RecentView.swift */,
+			);
+			path = Recent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82193CF71FC9C27427A1543C /* SeliaScanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFDE081F3F58C501C120885C /* Build configuration list for PBXNativeTarget "SeliaScanTests" */;
+			buildPhases = (
+				2C02698E43CD6A5E2E8C2F21 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				584920C61B46D37B8038222D /* PBXTargetDependency */,
+			);
+			name = SeliaScanTests;
+			packageProductDependencies = (
+			);
+			productName = SeliaScanTests;
+			productReference = EC55228E3A64BC36FF4EFFB9 /* SeliaScanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0E14E1FD7ABC5463CCF422A /* SeliaScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4EE5F96C994EE6C82490CE3 /* Build configuration list for PBXNativeTarget "SeliaScan" */;
+			buildPhases = (
+				35035C66FA40B18FA061B169 /* Sources */,
+				92E811172223DD5679B5D1BB /* Resources */,
+				8DC7514BFA395C0951946435 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0461B578953E9769428BD5 /* PBXTargetDependency */,
+			);
+			name = SeliaScan;
+			packageProductDependencies = (
+			);
+			productName = SeliaScan;
+			productReference = BB71A19CEBD40203CE4F82FC /* SeliaScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AEB64C5512F66CAFF4BEE8B1 /* SeliaScanControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC3073AAD1BBAC66D45214B /* Build configuration list for PBXNativeTarget "SeliaScanControls" */;
+			buildPhases = (
+				2C53F235DF3F76C2F5AC9B81 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeliaScanControls;
+			packageProductDependencies = (
+			);
+			productName = SeliaScanControls;
+			productReference = 066A7D80335271B89BE4635D /* SeliaScanControls.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B1A5B661DDD491FEAD475964 /* SeliaScanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CB94A179558359C2C49AF95 /* Build configuration list for PBXNativeTarget "SeliaScanUITests" */;
+			buildPhases = (
+				B8A81B9BD1CEEBE5A004DF14 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E34B643FA76AC1A7B0C84FDF /* PBXTargetDependency */,
+			);
+			name = SeliaScanUITests;
+			packageProductDependencies = (
+			);
+			productName = SeliaScanUITests;
+			productReference = 8AD71581B004FE509A4DA6EF /* SeliaScanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76AD2B21D1D27BEB5366672F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					82193CF71FC9C27427A1543C = {
+						DevelopmentTeam = MTYBUX7QS6;
+						ProvisioningStyle = Automatic;
+					};
+					A0E14E1FD7ABC5463CCF422A = {
+						DevelopmentTeam = MTYBUX7QS6;
+						ProvisioningStyle = Automatic;
+					};
+					AEB64C5512F66CAFF4BEE8B1 = {
+						DevelopmentTeam = MTYBUX7QS6;
+						ProvisioningStyle = Automatic;
+					};
+					B1A5B661DDD491FEAD475964 = {
+						DevelopmentTeam = MTYBUX7QS6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A0E14E1FD7ABC5463CCF422A;
+					};
+				};
+			};
+			buildConfigurationList = 3076BD61AE86426B8DD0D880 /* Build configuration list for PBXProject "SeliaScan" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				cs,
+				de,
+				en,
+				es,
+				"zh-Hans",
+			);
+			mainGroup = 126CA343EE95CE5AE9DA8F3E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 218CDF58F92A1C25145C76E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0E14E1FD7ABC5463CCF422A /* SeliaScan */,
+				82193CF71FC9C27427A1543C /* SeliaScanTests */,
+				B1A5B661DDD491FEAD475964 /* SeliaScanUITests */,
+				AEB64C5512F66CAFF4BEE8B1 /* SeliaScanControls */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92E811172223DD5679B5D1BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9978272F5C1AC3207556A5BE /* Assets.xcassets in Resources */,
+				48F73CA49C8B36B6797899FA /* InfoPlist.xcstrings in Resources */,
+				30C8A0D4FA974E9547AC78A3 /* Localizable.xcstrings in Resources */,
+				F8EF14B49ED2D8FBA27F9DDD /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C02698E43CD6A5E2E8C2F21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0C743200737521EE37992D /* ModelTests.swift in Sources */,
+				A7F9504FA253AAE43D11A45C /* RecentRepositoryTests.swift in Sources */,
+				61EB2409076C3037414CDFA3 /* SavedMarkStoreTests.swift in Sources */,
+				C0741183F08FDA9361648C08 /* SecurityGeometryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C53F235DF3F76C2F5AC9B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47A3188188C8BC3FC4CE9C95 /* AppIdentifiers.swift in Sources */,
+				4C78BF82D57A79B5B020A3D0 /* ControlsBundle.swift in Sources */,
+				C7625B2207CF16636C4C4C85 /* ScanControlWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35035C66FA40B18FA061B169 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13524B520F2AAAEE15B109F3 /* AppConfiguration.swift in Sources */,
+				E3A771B0D87677AC056DB5C2 /* AppIdentifiers.swift in Sources */,
+				F90CC9CE73770BFCA7BA12E6 /* AppState.swift in Sources */,
+				49E600A5E527BAF7283D60D3 /* CleanupRevisionService.swift in Sources */,
+				53DACD5A0B02A2DEC357E5C0 /* CleanupService.swift in Sources */,
+				EE8979BFFD8633D91289CDD2 /* ContentView.swift in Sources */,
+				FFFFC7CDD80DAE239C60A135 /* DocumentActions.swift in Sources */,
+				D1442FAEE636FD47829248FA /* DocumentActionsView.swift in Sources */,
+				A6C3E2C5BF6B6EE5A55569E8 /* DocumentAnalysisService.swift in Sources */,
+				E7F5D865F57C8BAA9ED4B72E /* DocumentScanner.swift in Sources */,
+				B23F2206EB2EC5BF8A7C9AB7 /* ExportSettingsView.swift in Sources */,
+				4B0EA50F607993F86472F2EF /* ExternalOutputStore.swift in Sources */,
+				1D97ED15653A71732B41FC1F /* FileExportPicker.swift in Sources */,
+				4B7C0017FD633FF7CF14071E /* FolderPicker.swift in Sources */,
+				E328AF29872D047B282E471B /* ImageExporter.swift in Sources */,
+				56D57B617929334912665345 /* ImportDocumentView.swift in Sources */,
+				3D58AD11DFF4BB791A039004 /* LiveTextImageView.swift in Sources */,
+				2CA37E2A97517FB59B1A9D1A /* ManualCleanupEditorView.swift in Sources */,
+				4058CCF4FC720758FD00E1B5 /* NewScanIntent.swift in Sources */,
+				969CFBA22674DC46C5C357AE /* PDFCoordinateMapper.swift in Sources */,
+				61A85B0717B30A085D0D4626 /* PDFImportService.swift in Sources */,
+				FD91C78DED41581920F0C17B /* PageEditView.swift in Sources */,
+				5A1C625666C2822D2822D8B6 /* PageOrganizerView.swift in Sources */,
+				D29C575336E3F6C3EC5DE2DA /* PageRenderer.swift in Sources */,
+				507F0D56173337606D7A1E82 /* PhotosSaver.swift in Sources */,
+				9ED8ACFD0EA299D3D14A07C8 /* PrintCoordinator.swift in Sources */,
+				6F244AA30A820146F79CB44F /* RecentRepository.swift in Sources */,
+				4FB84302C79E17B7F98A796E /* RecentView.swift in Sources */,
+				23B364DF1477DBBE05EB0E75 /* RedactionEditorView.swift in Sources */,
+				B3912991C199B1A05FEC37D2 /* RedactionRenderer.swift in Sources */,
+				58E4AC7D72C80AF936588FE7 /* ResultView.swift in Sources */,
+				939E2715F3456DFB35A9F585 /* ScanModels.swift in Sources */,
+				0E2D0C5AA776312772C0677F /* ScannerLaunchView.swift in Sources */,
+				BFAA04A200C69B236B55B183 /* SearchablePDFExporter.swift in Sources */,
+				5288AEFE8487BC9054E31998 /* SecureRedactionService.swift in Sources */,
+				9493423FF1972426B46DB13A /* SeliaScanApp.swift in Sources */,
+				9D7FA5E5EE477EF397238F26 /* SettingsView.swift in Sources */,
+				1917E7FAB36A80B83EC708CA /* ShareCoordinator.swift in Sources */,
+				7074C513AE0D83A14CF94765 /* SignatureCanvas.swift in Sources */,
+				BDDE5F953A46BC304D1552FF /* SignatureEditorView.swift in Sources */,
+				871876721E8E411649B09F25 /* TrackedOutputDeletionService.swift in Sources */,
+				6836B1C05793E1B09A911AF4 /* ViewerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A81B9BD1CEEBE5A004DF14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D37FDCFDC6EDC795752FA0 /* AppIdentifiers.swift in Sources */,
+				0600C649C33C224DA72602A0 /* AppStoreScreenshotTests.swift in Sources */,
+				D2EC163AB961F4265E016872 /* LaunchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		584920C61B46D37B8038222D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E14E1FD7ABC5463CCF422A /* SeliaScan */;
+			targetProxy = 2D9D14C8420CE5CB73ACEEF8 /* PBXContainerItemProxy */;
+		};
+		DF0461B578953E9769428BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEB64C5512F66CAFF4BEE8B1 /* SeliaScanControls */;
+			targetProxy = 05AA800A20CB5627A5D8E75C /* PBXContainerItemProxy */;
+		};
+		E34B643FA76AC1A7B0C84FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0E14E1FD7ABC5463CCF422A /* SeliaScan */;
+			targetProxy = 7D25C0A020CE23FF87A277ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		209BF26858A0ACB1CA4E665E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MTYBUX7QS6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 2.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		3E4ED246A219EE8DA10A3863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SeliaScan/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F771314D63A4C8A395D048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeliaScanControls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.controls;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DFA36491A8E9CA1DFE64B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeliaScan;
+			};
+			name = Release;
+		};
+		8A9AF4FBA722E3FF02C4DD85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeliaScan;
+			};
+			name = Debug;
+		};
+		B5A7961987B418DEB8B0A198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeliaScan.app/SeliaScan";
+			};
+			name = Release;
+		};
+		C15999978B5710E5821E07A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SeliaScan/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3F6804FA6A765F9132C9CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeliaScanControls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.controls;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CCA20E79EA6520B6D65C60EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.majkeylab.seliascan.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeliaScan.app/SeliaScan";
+			};
+			name = Debug;
+		};
+		D28DB7F04DCD626840782822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MTYBUX7QS6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 2.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3076BD61AE86426B8DD0D880 /* Build configuration list for PBXProject "SeliaScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D28DB7F04DCD626840782822 /* Debug */,
+				209BF26858A0ACB1CA4E665E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5CB94A179558359C2C49AF95 /* Build configuration list for PBXNativeTarget "SeliaScanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A9AF4FBA722E3FF02C4DD85 /* Debug */,
+				5DFA36491A8E9CA1DFE64B33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FC3073AAD1BBAC66D45214B /* Build configuration list for PBXNativeTarget "SeliaScanControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F771314D63A4C8A395D048A /* Debug */,
+				C3F6804FA6A765F9132C9CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AFDE081F3F58C501C120885C /* Build configuration list for PBXNativeTarget "SeliaScanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA20E79EA6520B6D65C60EC /* Debug */,
+				B5A7961987B418DEB8B0A198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C4EE5F96C994EE6C82490CE3 /* Build configuration list for PBXNativeTarget "SeliaScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4ED246A219EE8DA10A3863 /* Debug */,
+				C15999978B5710E5821E07A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76AD2B21D1D27BEB5366672F /* Project object */;
+}

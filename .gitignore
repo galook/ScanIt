@@ -17,3 +17,18 @@ keystore.properties
 hs_err_pid*.log
 replay_pid*.log
 .repo_graph/
+
+# Xcode user state and local release output.
+**/xcuserdata/
+*.xcuserstate
+ios/build/
+ios/.bundle/
+ios/vendor/bundle/
+ios/fastlane/report.xml
+ios/fastlane/Preview.html
+ios/fastlane/test_output/
+ios/fastlane/metadata/review_information/phone_number.txt
+
+# App Store Connect credentials must never be committed.
+ios/.env.appstore
+ios/AuthKey_*.p8

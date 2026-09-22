@@ -1,0 +1,1 @@
+Scanner,Dokument,PDF,OCR,Schwärzen,Unterschrift,Barcode,Beleg,Scan,Datenschutz

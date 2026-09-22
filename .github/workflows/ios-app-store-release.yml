@@ -1,0 +1,118 @@
+name: iOS App Store Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: App Store version
+        required: true
+        default: '2.0'
+      build_number:
+        description: Numeric build number; blank uses the workflow run number
+        required: false
+        type: string
+      upload_screenshots:
+        description: Capture and replace all localized screenshots
+        required: true
+        default: true
+        type: boolean
+      submit_review:
+        description: Submit after upload; release remains manual
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fruityselia-app-store-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: macos-15
+    timeout-minutes: 120
+    environment: app-store-production
+    env:
+      APP_IDENTIFIER: com.majkeylab.seliascan
+      APPLE_TEAM_ID: MTYBUX7QS6
+      APP_STORE_APP_ID: ${{ secrets.APP_STORE_APP_ID }}
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_REVIEW_PHONE: ${{ secrets.APP_REVIEW_PHONE }}
+      CERTIFICATE_PASSWORD: ${{ secrets.APPLE_DISTRIBUTION_CERTIFICATE_PASSWORD }}
+      KEYCHAIN_PASSWORD: ${{ secrets.APPLE_BUILD_KEYCHAIN_PASSWORD }}
+      MARKETING_VERSION: ${{ inputs.version }}
+      BUILD_NUMBER: ${{ inputs.build_number || github.run_number }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: ruby/setup-ruby@e8944e80fb94b20106697132f8c20c665fab29e9 # v1.325.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Install release tools
+        run: |
+          brew install xcodegen
+
+      - name: Install signing and App Store Connect credentials
+        env:
+          ASC_PRIVATE_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_PRIVATE_KEY_BASE64 }}
+          DISTRIBUTION_CERTIFICATE_BASE64: ${{ secrets.APPLE_DISTRIBUTION_CERTIFICATE_BASE64 }}
+        run: |
+          set -euo pipefail
+          key_file="$RUNNER_TEMP/AuthKey_${APP_STORE_CONNECT_KEY_ID}.p8"
+          cert_file="$RUNNER_TEMP/distribution.p12"
+          keychain="$RUNNER_TEMP/app-store.keychain-db"
+          printf '%s' "$ASC_PRIVATE_KEY_BASE64" | base64 -D > "$key_file"
+          printf '%s' "$DISTRIBUTION_CERTIFICATE_BASE64" | base64 -D > "$cert_file"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$keychain"
+          security set-keychain-settings -lut 21600 "$keychain"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$keychain"
+          security import "$cert_file" -P "$CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k "$keychain"
+          security set-key-partition-list -S apple-tool:,apple: -k "$KEYCHAIN_PASSWORD" "$keychain"
+          security list-keychains -d user -s "$keychain"
+          printf 'APP_STORE_CONNECT_KEY_FILE=%s\n' "$key_file" >> "$GITHUB_ENV"
+          printf '%s\n' "$APP_REVIEW_PHONE" > ios/fastlane/metadata/review_information/phone_number.txt
+
+      - name: Build and test
+        run: cd ios && bash tools/build-and-test.sh
+
+      - name: Capture localized App Store screenshots
+        if: ${{ inputs.upload_screenshots }}
+        run: cd ios && bash tools/capture-app-store-screenshots.sh
+
+      - name: Validate submission data
+        env:
+          REQUIRE_SCREENSHOTS: ${{ inputs.upload_screenshots && '1' || '0' }}
+        run: cd ios && bash tools/validate_app_store.sh --submission
+
+      - name: Archive and export IPA
+        run: cd ios && bash tools/archive-app-store.sh
+
+      - name: Upload release candidate
+        env:
+          UPLOAD_SCREENSHOTS: ${{ inputs.upload_screenshots && '1' || '0' }}
+        run: cd ios && bash tools/bundle.sh exec fastlane ios release_candidate
+
+      - name: Submit for review with manual release
+        if: ${{ inputs.submit_review }}
+        env:
+          CONFIRM_SUBMIT: YES
+          REQUIRE_SCREENSHOTS: ${{ inputs.upload_screenshots && '1' || '0' }}
+        run: cd ios && bash tools/bundle.sh exec fastlane ios submit_review
+
+      - name: Upload archive logs
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: fruityselia-release-${{ github.run_number }}
+          path: |
+            ios/build/export
+            ios/build/*.xcarchive/Info.plist
+            ios/fastlane/report.xml
+          if-no-files-found: ignore
+          retention-days: 14

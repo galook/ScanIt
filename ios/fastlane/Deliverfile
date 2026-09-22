@@ -1,0 +1,9 @@
+app_identifier ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan")
+metadata_path "fastlane/metadata"
+screenshots_path "fastlane/screenshots"
+copyright "2026 Matěj Teplý"
+primary_category "PRODUCTIVITY"
+secondary_category "UTILITIES"
+price_tier 0
+app_rating_config_path "fastlane/metadata/app_rating_config.json"
+run_precheck_before_submit true

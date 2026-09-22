@@ -1,0 +1,1 @@
+Escaneo privado con OCR local, ocultación segura, PDF con búsqueda, firmas y sellos. Sin cuenta ni biblioteca de documentos en la nube.

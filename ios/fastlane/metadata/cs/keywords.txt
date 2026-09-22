@@ -1,0 +1,1 @@
+skener,dokument,PDF,OCR,redakce,podpis,čárový kód,účtenka,sken,soukromí

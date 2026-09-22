@@ -1,0 +1,1 @@
+scanner,document,PDF,OCR,redact,signature,barcode,receipt,scan,privacy

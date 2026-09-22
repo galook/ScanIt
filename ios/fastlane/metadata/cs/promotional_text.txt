@@ -1,0 +1,1 @@
+Soukromé skenování dokumentů s místním OCR, bezpečnou redakcí, prohledávatelným PDF, podpisy a razítky. Bez účtu a cloudové knihovny.

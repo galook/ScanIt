@@ -1,0 +1,1 @@
+escáner,documento,PDF,OCR,ocultar,firma,código de barras,recibo,escanear,privacidad

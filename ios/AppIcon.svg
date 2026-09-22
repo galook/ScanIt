@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1024"
+     height="1024"
+     viewBox="0 0 1024 1024"
+     shape-rendering="geometricPrecision">
+  <!-- SeliaScan uses a near-black canvas, white document surfaces, and one
+       system-blue action accent throughout the native interface. -->
+  <rect width="1024" height="1024" fill="#0A0A0A"/>
+
+  <!-- Document -->
+  <path d="M304 218
+           Q276 218 276 246
+           V778
+           Q276 806 304 806
+           H720
+           Q748 806 748 778
+           V366
+           L600 218
+           Z"
+        fill="#FFFFFF"/>
+  <path d="M600 218V334Q600 366 632 366H748Z" fill="#D8D8DC"/>
+  <rect x="356" y="382" width="212" height="30" rx="15" fill="#0A0A0A"/>
+  <rect x="356" y="452" width="312" height="30" rx="15" fill="#0A0A0A"/>
+  <rect x="356" y="522" width="260" height="30" rx="15" fill="#0A0A0A"/>
+
+  <!-- Scanner frame: same crisp, rounded geometry as the app's controls. -->
+  <g fill="none" stroke="#0A84FF" stroke-width="48" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 174H204Q174 174 174 204V260"/>
+    <path d="M764 174H820Q850 174 850 204V260"/>
+    <path d="M260 850H204Q174 850 174 820V764"/>
+    <path d="M764 850H820Q850 850 850 820V764"/>
+  </g>
+  <rect x="226" y="626" width="572" height="30" rx="15" fill="#0A84FF"/>
+</svg>
