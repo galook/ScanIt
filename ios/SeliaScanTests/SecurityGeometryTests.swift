@@ -115,6 +115,12 @@ final class SecurityGeometryTests: XCTestCase {
             context.cgContext.draw(qrImage, in: CGRect(x: 350, y: 550, width: 500, height: 500))
         }
         try XCTUnwrap(page.pngData()).write(to: source)
+        let preflight = VNDetectBarcodesRequest(); preflight.symbologies = [.qr]
+        do { try VNImageRequestHandler(cgImage: try XCTUnwrap(page.cgImage)).perform([preflight]) }
+        catch { throw XCTSkip("Vision barcode inference is unavailable in this Simulator runtime: \(error.localizedDescription)") }
+        guard (preflight.results ?? []).contains(where: { $0.payloadStringValue == payload }) else {
+            throw XCTSkip("Vision barcode inference does not recognize the deterministic fixture in this Simulator runtime.")
+        }
         let repository = RecentRepository(root: root)
         var document = try await repository.createDocument(from: [source])
         document.pages[0].analysis = PageAnalysis(barcodes: [RecognizedBarcode(id: UUID(), payload: payload, symbology: VNBarcodeSymbology.qr.rawValue, bounds: CGRect(x: 350.0 / 1_200, y: 550.0 / 1_600, width: 500.0 / 1_200, height: 500.0 / 1_600))], visualComplexity: 0.4, mostlyGrayscale: true)
