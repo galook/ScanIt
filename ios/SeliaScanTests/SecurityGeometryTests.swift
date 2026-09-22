@@ -103,7 +103,13 @@ final class SecurityGeometryTests: XCTestCase {
         let qr = CIFilter.qrCodeGenerator(); qr.message = Data(payload.utf8); qr.correctionLevel = "H"
         let qrImage = try XCTUnwrap(CIContext().createCGImage(try XCTUnwrap(qr.outputImage), from: try XCTUnwrap(qr.outputImage).extent))
         let source = root.appendingPathComponent("qr.png")
-        let page = UIGraphicsImageRenderer(size: CGSize(width: 1_200, height: 1_600)).image { context in
+        let imageFormat = UIGraphicsImageRendererFormat()
+        imageFormat.scale = 1
+        imageFormat.opaque = true
+        let page = UIGraphicsImageRenderer(
+            size: CGSize(width: 1_200, height: 1_600),
+            format: imageFormat
+        ).image { context in
             UIColor.white.setFill(); context.fill(CGRect(x: 0, y: 0, width: 1_200, height: 1_600))
             context.cgContext.interpolationQuality = .none
             context.cgContext.draw(qrImage, in: CGRect(x: 350, y: 550, width: 500, height: 500))
