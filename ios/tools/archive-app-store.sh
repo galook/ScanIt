@@ -49,18 +49,18 @@ export_command=(
 )
 if (( ! unsigned )); then
   # Use the Apple account already signed into Xcode to create or refresh
-  # managed distribution certificates and provisioning profiles.
+  # development provisioning needed for the archive. Export uses the exact
+  # App Store profiles declared in ExportOptions.plist.
   archive_command+=(-allowProvisioningUpdates)
-  export_command+=(-allowProvisioningUpdates)
 fi
 if [[ -n "${APP_STORE_CONNECT_KEY_FILE:-}" && -n "${APP_STORE_CONNECT_KEY_ID:-}" && -n "${APP_STORE_CONNECT_ISSUER_ID:-}" ]]; then
+  ruby tools/sync_app_store_profiles.rb
   authentication_args=(
     -authenticationKeyPath "$APP_STORE_CONNECT_KEY_FILE"
     -authenticationKeyID "$APP_STORE_CONNECT_KEY_ID"
     -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID"
   )
   archive_command+=("${authentication_args[@]}")
-  export_command+=("${authentication_args[@]}")
 fi
 
 if (( unsigned )); then

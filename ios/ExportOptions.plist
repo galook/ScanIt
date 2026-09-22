@@ -9,7 +9,16 @@
 	<key>method</key>
 	<string>app-store-connect</string>
 	<key>signingStyle</key>
-	<string>automatic</string>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>Apple Distribution</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.majkeylab.seliascan</key>
+		<string>FruitySelia App Store</string>
+		<key>com.majkeylab.seliascan.controls</key>
+		<string>FruitySelia Controls App Store</string>
+	</dict>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
