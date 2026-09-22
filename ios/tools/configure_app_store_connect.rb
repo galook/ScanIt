@@ -140,7 +140,9 @@ unless availability_exists
   })
 end
 
+phone_path = File.join(ios_root, "fastlane/metadata/review_information/phone_number.txt")
 phone = ENV["APP_REVIEW_PHONE"].to_s.strip
+phone = File.read(phone_path).strip if phone.empty? && File.file?(phone_path)
 review_attributes = {
   contactFirstName: File.read(File.join(ios_root, "fastlane/metadata/review_information/first_name.txt")).strip,
   contactLastName: File.read(File.join(ios_root, "fastlane/metadata/review_information/last_name.txt")).strip,
