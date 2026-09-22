@@ -1,6 +1,13 @@
 opt_out_usage
 default_platform(:ios)
 
+def ios_root
+  File.expand_path("..", __dir__)
+end
+
+require "dotenv"
+Dotenv.load(File.join(ios_root, ".env.appstore"))
+
 def connect_api_key
   app_store_connect_api_key(
     key_id: ENV.fetch("APP_STORE_CONNECT_KEY_ID"),
@@ -12,7 +19,9 @@ def connect_api_key
 end
 
 def release_ipa
-  path = ENV["IPA_PATH"] || Dir["build/export/*.ipa"].first
+  path = ENV["IPA_PATH"]
+  path = File.expand_path(path, ios_root) if path
+  path ||= Dir[File.join(ios_root, "build/export/*.ipa")].first
   UI.user_error!("No IPA found. Run tools/archive-app-store.sh or set IPA_PATH.") unless path && File.file?(path)
   path
 end
@@ -20,14 +29,16 @@ end
 platform :ios do
   desc "Validate local release data and metadata against App Store Connect"
   lane :validate do
-    sh("bash tools/validate_app_store.sh")
+    Bundler.with_unbundled_env do
+      sh("bash #{File.join(ios_root, 'tools/validate_app_store.sh')}")
+    end
     deliver(
       api_key: connect_api_key,
       app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
       app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
       platform: "ios",
-      metadata_path: "fastlane/metadata",
-      screenshots_path: "fastlane/screenshots",
+      metadata_path: File.join(ios_root, "fastlane/metadata"),
+      screenshots_path: File.join(ios_root, "fastlane/screenshots"),
       skip_binary_upload: true,
       skip_screenshots: true,
       verify_only: true,
@@ -38,17 +49,38 @@ platform :ios do
 
   desc "Upload localized metadata; add UPLOAD_SCREENSHOTS=1 after capture"
   lane :metadata do
-    sh("bash tools/validate_app_store.sh")
+    Bundler.with_unbundled_env do
+      sh("bash #{File.join(ios_root, 'tools/validate_app_store.sh')}")
+    end
     deliver(
       api_key: connect_api_key,
       app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
       app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
       platform: "ios",
-      metadata_path: "fastlane/metadata",
-      screenshots_path: "fastlane/screenshots",
+      metadata_path: File.join(ios_root, "fastlane/metadata"),
+      screenshots_path: File.join(ios_root, "fastlane/screenshots"),
       skip_binary_upload: true,
       skip_screenshots: ENV["UPLOAD_SCREENSHOTS"] != "1",
       overwrite_screenshots: ENV["UPLOAD_SCREENSHOTS"] == "1",
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload App Store screenshots without changing metadata or binary"
+  lane :screenshots do
+    Bundler.with_unbundled_env do
+      sh("bash #{File.join(ios_root, 'tools/validate_app_store.sh')}")
+    end
+    deliver(
+      api_key: connect_api_key,
+      app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
+      app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
+      platform: "ios",
+      screenshots_path: File.join(ios_root, "fastlane/screenshots"),
+      skip_binary_upload: true,
+      skip_metadata: true,
+      overwrite_screenshots: true,
       force: true,
       precheck_include_in_app_purchases: false
     )
@@ -68,15 +100,17 @@ platform :ios do
 
   desc "Upload IPA and store data without submitting for review"
   lane :release_candidate do
-    sh("bash tools/validate_app_store.sh")
+    Bundler.with_unbundled_env do
+      sh("bash #{File.join(ios_root, 'tools/validate_app_store.sh')}")
+    end
     deliver(
       api_key: connect_api_key,
       app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
       app_version: ENV.fetch("MARKETING_VERSION", "2.0"),
       platform: "ios",
       ipa: release_ipa,
-      metadata_path: "fastlane/metadata",
-      screenshots_path: "fastlane/screenshots",
+      metadata_path: File.join(ios_root, "fastlane/metadata"),
+      screenshots_path: File.join(ios_root, "fastlane/screenshots"),
       skip_screenshots: ENV["UPLOAD_SCREENSHOTS"] != "1",
       overwrite_screenshots: ENV["UPLOAD_SCREENSHOTS"] == "1",
       submit_for_review: false,
@@ -89,7 +123,9 @@ platform :ios do
   desc "Explicitly submit the prepared version for manual release"
   lane :submit_review do
     UI.user_error!("Set CONFIRM_SUBMIT=YES after reviewing every disclosure") unless ENV["CONFIRM_SUBMIT"] == "YES"
-    sh("bash tools/validate_app_store.sh --submission")
+    Bundler.with_unbundled_env do
+      sh("bash #{File.join(ios_root, 'tools/validate_app_store.sh')} --submission")
+    end
     deliver(
       api_key: connect_api_key,
       app_identifier: ENV.fetch("APP_IDENTIFIER", "com.majkeylab.seliascan"),
