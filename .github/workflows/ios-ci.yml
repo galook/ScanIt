@@ -26,6 +26,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          destination="$(xcrun simctl list devices available | sed -nE 's/^[[:space:]]+(iPhone[^()]*) \(([0-9A-F-]+)\) \(Shutdown\)$/id=\2/p' | head -1)"
+          destination="$(xcrun simctl list devices available --json | jq -r 'first(.devices[] | .[] | select(.isAvailable and (.name | startswith("iPhone"))) | .udid) // empty')"
           test -n "$destination"
-          xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -destination "$destination" CODE_SIGNING_ALLOWED=NO test
+          xcodebuild -project ios/SeliaScan.xcodeproj -scheme SeliaScan -destination "id=$destination" CODE_SIGNING_ALLOWED=NO test
