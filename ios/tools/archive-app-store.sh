@@ -47,9 +47,14 @@ export_command=(
   -exportPath "$export_path"
   -exportOptionsPlist ExportOptions.plist
 )
+if (( ! unsigned )); then
+  # Use the Apple account already signed into Xcode to create or refresh
+  # managed distribution certificates and provisioning profiles.
+  archive_command+=(-allowProvisioningUpdates)
+  export_command+=(-allowProvisioningUpdates)
+fi
 if [[ -n "${APP_STORE_CONNECT_KEY_FILE:-}" && -n "${APP_STORE_CONNECT_KEY_ID:-}" && -n "${APP_STORE_CONNECT_ISSUER_ID:-}" ]]; then
   authentication_args=(
-    -allowProvisioningUpdates
     -authenticationKeyPath "$APP_STORE_CONNECT_KEY_FILE"
     -authenticationKeyID "$APP_STORE_CONNECT_KEY_ID"
     -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID"

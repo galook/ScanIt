@@ -13,9 +13,9 @@
     "secondaryCategory": "UTILITIES"
   },
   "urls": {
-    "marketing": "https://majkey25.github.io/ScanIt/fruityselia/",
-    "support": "https://majkey25.github.io/ScanIt/fruityselia/support.html",
-    "privacy": "https://majkey25.github.io/ScanIt/fruityselia/privacy.html"
+    "marketing": "https://galook.github.io/ScanIt/fruityselia/",
+    "support": "https://galook.github.io/ScanIt/fruityselia/support.html",
+    "privacy": "https://galook.github.io/ScanIt/fruityselia/privacy.html"
   },
   "review": {
     "requiresLogin": false,
@@ -26,7 +26,7 @@
     "contactPhone": "required from publisher before submission"
   },
   "appPrivacy": {
-    "privacyPolicyUrl": "https://majkey25.github.io/ScanIt/fruityselia/privacy.html",
+    "privacyPolicyUrl": "https://galook.github.io/ScanIt/fruityselia/privacy.html",
     "dataCollected": false,
     "tracking": false,
     "trackingDomains": [],
